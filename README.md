@@ -1,16 +1,30 @@
-# React + Vite
+# Food Glasses
+A lightweight web app that helps users check the freshness of produce using image analysis or quick item lookups. Built during Technica 2025.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Food Glasses lets users upload a photo of their fruits or vegetables to estimate freshness based on a small ONNX model and heuristic spoilage checks. Users can also search for an item to view shelf-life info, unsafe signs, and storage tips. The goal is to support more mindful food storage and reduce household food waste.
 
-Currently, two official plugins are available:
+## Features
+- Photo-based freshness check using ONNX Runtime
+- Produce lookup with shelf-life, unsafe signs, and storage guidance
+- Heuristic spoilage detection (dark patches, mold-like clusters, etc.)
+- Clean React + Tailwind UI
+- Modular backend pipeline using FastAPI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How It Works
+1. User uploads an image or searches for produce.
+2. Backend identifies the item using an ONNX classification model.
+3. Heuristic checks scan for visible spoilage cues.
+4. Freshness data (lifespan, unsafe signs, storage tips) is pulled from a JSON file.
+5. The frontend displays a combined “freshness verdict.”
 
-## React Compiler
+## Tech Stack
+Frontend: 
+- React
+- Vite
+- Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Backend:
+- FastAPI
+- Python
+- ONNX Runtime
+- JSON database
