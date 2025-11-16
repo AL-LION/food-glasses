@@ -1,3 +1,157 @@
-{
-  "_placeholder": "Food spoilage data will be added in Phase 2"
-}
+[
+  {
+    "name": "apple",
+    "fridge_life_days": 21,
+    "counter_life_days": 7,
+    "unsafe_signs": [
+      "Large soft spots on the skin.",
+      "Leaking or oozing liquid.",
+      "Visible mold growth.",
+      "A fermented or alcohol-like smell."
+    ],
+    "tips": [
+      "Store apples in the refrigerator, ideally in a breathable or perforated bag.",
+      "Keep them away from bananas, which emit ethylene and accelerate ripening.",
+      "Leave apples whole until use—cut apples brown quickly when exposed to air."
+    ]
+  },
+  {
+    "name": "avocado",
+    "fridge_life_days": 5,
+    "counter_life_days": 3,
+    "unsafe_signs": [
+      "Collapsed or sunken skin.",
+      "A sour or off smell when opened.",
+      "Brown, stringy, or mushy flesh.",
+      "Visible mold near the stem or on the surface."
+    ],
+    "tips": [
+      "Let firm avocados ripen at room temperature before refrigerating.",
+      "Store ripe avocados in the refrigerator to slow further softening.",
+      "Keep cut avocados wrapped tightly or with lemon to reduce browning."
+    ]
+  },
+  {
+    "name": "banana",
+    "fridge_life_days": 5,
+    "counter_life_days": 5,
+    "unsafe_signs": [
+      "Leaking liquid from the skin.",
+      "Large patches of mold.",
+      "A strong fermented smell."
+    ],
+    "tips": [
+      "Store bananas at room temperature for even ripening.",
+      "Refrigerate ripe bananas to slow browning—the skins may darken but the fruit stays firm.",
+      "Avoid sealing bananas in airtight bags, which trap moisture and accelerate spoilage."
+    ]
+  },
+  {
+    "name": "blueberry",
+    "fridge_life_days": 7,
+    "counter_life_days": 2,
+    "unsafe_signs": [
+      "Visible mold fuzz on the berries.",
+      "Leaking or mushy berries.",
+      "General shriveling or collapse."
+    ],
+    "tips": [
+      "Store blueberries unwashed in the refrigerator.",
+      "Wash only right before eating to prevent moisture-related spoilage.",
+      "Remove spoiled berries promptly to prevent mold spread."
+    ]
+  },
+  {
+    "name": "carrot",
+    "fridge_life_days": 21,
+    "counter_life_days": 5,
+    "unsafe_signs": [
+      "A slimy or slippery surface.",
+      "Limp, floppy texture when bent.",
+      "Soft rot or black mold spots."
+    ],
+    "tips": [
+      "Store carrots in a ventilated bag in the refrigerator.",
+      "Keep them dry to avoid surface slime.",
+      "Remove green tops if present, as they draw moisture from the carrot."
+    ]
+  },
+  {
+    "name": "cauliflower",
+    "fridge_life_days": 10,
+    "counter_life_days": 2,
+    "unsafe_signs": [
+      "Black mold on florets or stem.",
+      "A sulfur-like or rotten smell.",
+      "Slimy or mushy florets.",
+      "Severe browning across the head."
+    ],
+    "tips": [
+      "Store cauliflower whole in the refrigerator for best longevity.",
+      "Keep it dry—moisture encourages mold.",
+      "Small brown spots are usually cosmetic and can be trimmed away."
+    ]
+  },
+  {
+    "name": "cucumber",
+    "fridge_life_days": 7,
+    "counter_life_days": 2,
+    "unsafe_signs": [
+      "Yellowing of the skin.",
+      "Sunken or soft spots.",
+      "Leaking liquid from damaged areas.",
+      "Mold growing at the ends."
+    ],
+    "tips": [
+      "Store cucumbers in the crisper drawer to avoid cold injury.",
+      "Keep them dry and away from areas of high humidity.",
+      "Do not store directly against very cold refrigerator walls."
+    ]
+  },
+  {
+    "name": "grape",
+    "fridge_life_days": 10,
+    "counter_life_days": 2,
+    "unsafe_signs": [
+      "Mold growth on stems or fruit.",
+      "Soft, squishy grapes.",
+      "Leaking juice.",
+      "Heavily shriveled clusters."
+    ],
+    "tips": [
+      "Store grapes unwashed in a breathable bag in the refrigerator.",
+      "Wash only before eating to prevent excess moisture.",
+      "Remove spoiled grapes to prevent mold spreading."
+    ]
+  },
+  {
+    "name": "lemon",
+    "fridge_life_days": 21,
+    "counter_life_days": 7,
+    "unsafe_signs": [
+      "Soft, squishy spots on the peel.",
+      "Visible mold patches.",
+      "Wrinkled or heavily shriveled skin."
+    ],
+    "tips": [
+      "Store lemons in the refrigerator for best shelf life.",
+      "Keep them dry—moisture encourages mold.",
+      "Avoid airtight bags, which trap humidity."
+    ]
+  },
+  {
+    "name": "onion",
+    "fridge_life_days": 30,
+    "counter_life_days": 21,
+    "unsafe_signs": [
+      "Wet, soft rot under the skin.",
+      "Sprouting combined with softness.",
+      "Black or green mold between layers."
+    ],
+    "tips": [
+      "Store onions in a cool, dark, well-ventilated place.",
+      "Avoid plastic bags—onions need airflow.",
+      "Keep onions separate from potatoes, which accelerate spoilage."
+    ]
+  }
+]
