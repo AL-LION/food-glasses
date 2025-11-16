@@ -1,5 +1,5 @@
 # Food Glasses
-A lightweight web app that helps users check the freshness of produce using image analysis or quick item lookups. Built during Technica 2025.
+A lightweight web app that helps users check the freshness of produce using image analysis or quick item lookups.
 
 Food Glasses lets users upload a photo of their fruits or vegetables to estimate freshness based on a small ONNX model and heuristic spoilage checks. Users can also search for an item to view shelf-life info, unsafe signs, and storage tips. The goal is to support more mindful food storage and reduce household food waste.
 
