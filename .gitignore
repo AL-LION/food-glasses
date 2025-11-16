@@ -32,3 +32,7 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# === Old unused model files (do NOT track) ===
+backend/models/imagenet_labels.txt
+backend/models/mobilenetv2-7.onnx

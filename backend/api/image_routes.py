@@ -1,34 +1,42 @@
 from fastapi import APIRouter, File, UploadFile
-from PIL import Image                      # NEW
-import numpy as np                         # NEW
-from io import BytesIO                     # NEW
+from PIL import Image
+from io import BytesIO
+
+# Correct import based on your folder structure
+from backend.models.product_classifier import classify_image
 
 router = APIRouter()
 
-# Endpoint for receiving an uploaded image and converting it to a NumPy array
 @router.post("/analyze-image")
 async def analyze_image(file: UploadFile = File(...)):
-    # Reject unsupported file types early
+    """
+    Receive an uploaded image, run ONNX produce classification,
+    and return the predicted label and confidence.
+    """
+
+    # Only accept JPEG or PNG
     if file.content_type not in ["image/jpeg", "image/png"]:
         return {"error": "Unsupported file type"}
 
-    # Step 1: Load all bytes from the uploaded image
+    # Read binary content
     img_bytes = await file.read()
 
-    # Step 2: Convert image bytes → Pillow Image object (RGB)
-    img = Image.open(BytesIO(img_bytes)).convert("RGB")
+    # Convert to Pillow image
+    try:
+        pil_image = Image.open(BytesIO(img_bytes)).convert("RGB")
+    except Exception:
+        return {"error": "Unable to read image"}
 
-    # Step 3: Convert Pillow Image → NumPy array
-    img_array = np.array(img)
+    # Run classifier
+    try:
+        prediction = classify_image(pil_image)
+    except Exception as e:
+        return {"error": f"Model inference failed: {str(e)}"}
 
-    # Step 4: Extract metadata for debugging / testing
-    height, width, channels = img_array.shape
-
+    # Respond with result
     return {
-        "message": "Image converted to NumPy array successfully",
         "filename": file.filename,
-        "shape": img_array.shape,           # e.g. (1080, 720, 3)
-        "height": int(height),
-        "width": int(width),
-        "channels": int(channels)
+        "predicted_item": prediction["label"],
+        "confidence": prediction["confidence"],
+        "class_index": prediction["index"]
     }

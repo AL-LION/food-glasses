@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api.image_routes import router as image_router
+from backend.api.image_routes import router as image_router   # <-- FIXED
 
 app = FastAPI()
 
@@ -20,4 +20,5 @@ app.include_router(image_router)
 @app.get("/")
 def root():
     return {"message": "Food Glasses API running"}
+
 
